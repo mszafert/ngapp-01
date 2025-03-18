@@ -1,10 +1,10 @@
-<main>
-  <a [routerLink]="['/']">
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/home.svg" alt="logo" aria-hidden="true" />
-    </header>
-  </a>
-  <section class="content">
+<main class="p-5 w-4/5 mx-auto max-w-full">
+  <header class="pb-2 mb-4 border-b-1 border-gray-200">
+    <a [routerLink]="['/']">
+      <img src="/assets/home.svg" alt="logo" aria-hidden="true" />
+    </a>
+  </header>
+  <section>
     <router-outlet />
   </section>
 </main>
