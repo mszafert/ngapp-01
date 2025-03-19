@@ -12,9 +12,11 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
+  housingService = inject(HousingService);
 
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousinglocations();
+    this.housingService.getAllHousinglocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+    });
   }
 }

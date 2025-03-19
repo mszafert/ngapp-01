@@ -1,7 +1,7 @@
 <article>
   <img
     class="listing-photo"
-    [src]="housingLocation?.photo"
+    [src]="`${housingLocation?.photo}`"
     alt="Exterior photo of {{ housingLocation?.name }}"
     crossorigin
   />
@@ -22,15 +22,15 @@
     <form class="flex flex-col gap-5" [formGroup]="applyForm" (submit)="submitApplication()">
       <div>
         <label class="block" for="first-name">First Name</label>
-        <input class="border-1 rounded p-2" id="first-name" type="text" formArrayName="firstName" />
+        <input class="border-1 rounded p-2" id="first-name" type="text" formControlName="firstName" />
       </div>
       <div>
         <label class="block" for="last-name">Last Name</label>
-        <input class="border-1 rounded p-2" id="last-name" type="text" formArrayName="lastName" />
+        <input class="border-1 rounded p-2" id="last-name" type="text" formControlName="lastName" />
       </div>
       <div>
         <label class="block" for="email">Email</label>
-        <input class="border-1 rounded p-2" id="email" type="email" formArrayName="email" />
+        <input class="border-1 rounded p-2" id="email" type="email" formControlName="email" />
       </div>
       <div>
         <button class="c-white inline-block bg-blue-500 py-2 px-5 rounded cursor-pointer" type="submit">Apply now</button>

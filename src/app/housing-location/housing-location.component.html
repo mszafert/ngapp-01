@@ -1,7 +1,7 @@
 <section class="rounded overflow-hidden bg-gray-100 p-2 h-full hover:shadow-xl">
   <img
     class="aspect-3/2 object-cover"
-    [src]="housingLocation.photo"
+    [src]="`${housingLocation.photo}`"
     alt="Exterior photo of {{ housingLocation.name }}"
   />
   <h2 class="text-xl font-bold line-height-tight my-2">{{ housingLocation.name }}</h2>
