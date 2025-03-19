@@ -1,12 +1,12 @@
-<section class="rounded overflow-hidden bg-gray-100 p-2 h-full hover:shadow-xl">
+<section rounded overflow-hidden bg-gray-100 p-2 h-full hover:shadow-x>
   <img
-    class="aspect-3/2 object-cover"
+    aspect="3/2" object-cover
     [src]="`${housingLocation.photo}`"
     alt="Exterior photo of {{ housingLocation.name }}"
   />
-  <h2 class="text-xl font-bold line-height-tight my-2">{{ housingLocation.name }}</h2>
-  <p class="c-gray-500">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-  <p class="text-right">
-    <a class="border-b-dashed border-b-1 border-gray-300 c-gray-500" [routerLink]="['/details', housingLocation.id]">Learn More</a>
+  <h2 text-xl font-bold line-height-tight my-2>{{ housingLocation.name }}</h2>
+  <p c-gray-500>{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+  <p text-right>
+    <a border="b-dashed b-1 gray-300" c-gray-500 [routerLink]="['/details', housingLocation.id]">Learn More</a>
   </p>
 </section>

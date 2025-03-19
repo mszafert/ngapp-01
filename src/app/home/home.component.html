@@ -1,9 +1,9 @@
 <section class="pb-5">
-  <form>
-    <input type="text" placeholder="Filter by city" />
-    <button class="primary" type="button">Search</button>
+  <form class="flex gap-5">
+    <input class="w-full border-1 border-gray-300 px-2 rounded" type="text" placeholder="Filter by city" #filter />
+    <button class="color-white bg-blue-500 py-2 px-10 rounded" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
 </section>
 <section class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-  <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation" />
+  <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation" />
 </section>
